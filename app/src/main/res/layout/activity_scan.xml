@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <com.journeyapps.barcodescanner.CompoundBarcodeView
+        android:id="@+id/barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/buttonsLayout"
+        android:layout_alignParentTop="true">
+
+    </com.journeyapps.barcodescanner.CompoundBarcodeView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/buttonsLayout"
+        >
+        <Button
+            android:elevation="5dp"
+            android:layout_margin="3dp"
+            android:id="@+id/scan_more"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:text="Scan Again "
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/barcode_scanner"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
+        <!--<Button-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Pause"-->
+        <!--android:shadowColor="@color/black"-->
+        <!--android:elevation="5dp"-->
+        <!--android:id="@+id/scan_pause"-->
+        <!--android:layout_margin="10dp"-->
+        <!--/>-->
+
+        <!--<Button-->
+        <!--android:shadowColor="@color/black"-->
+        <!--android:elevation="5dp"-->
+        <!--android:layout_margin="10dp"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Resume"-->
+        <!--android:id="@+id/scan_resume"-->
+        <!--/>-->
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/centerHorizont" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/centerHorizont"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/buttonsLayout"
+        android:id="@+id/barcodePreview" />
+
+
+</RelativeLayout>
